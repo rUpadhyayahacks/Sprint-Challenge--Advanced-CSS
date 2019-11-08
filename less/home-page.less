@@ -11,19 +11,33 @@
     p {
       padding:0 15px;
     }
+    img {
+      @media @phone{
+        width:100%;
+      }
+    }
   
   }
+  
 
   .space-images {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    @media @phone{
+      .sky, .launch{
+        .blank()
+      }
+    }
 
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+      @media @phone{
+        width:90%;
+      }
     }
   }
 
@@ -45,9 +59,22 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+    @media @phone{
+      padding:0px;
+      width:90%;
+      margin:0 auto;
+      display:flex;
+      flex-direction: column-reverse;
+    }
 
     .walk-text {
       width: 50%;
+      @media @phone{
+        width:100%;
+    margin:0 auto;
+    align-items: center;
+    flex-direction:column;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -58,17 +85,42 @@
       }
 
       .btn {
+        font-weight:bold;
+        text-align: center;
+        background-color:#24292e;
+        border-radius: 8px;
+        padding:2% 0%;
+        .buttons(white, 10%, 30%);
+        @media @phone{
+          padding:5%;
+          margin-bottom:2%;
+          border-radius:0px;
+          .buttons(white, 10%, 100%)
+        }
+      }
+      .btn:hover {
+        color:#24292e;
+        background-color:white;
+        
+
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+      @media @phone{
+        width: 100%;
+    margin:1% auto;
+    align-items: center;
+    flex-direction:column;
+      }
       
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
+        
       }
     }
   }
